@@ -1,0 +1,28 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name = "com.hibernate.maven.User" table = "User">
+        <id name="userid" type="int">
+            <column name="user_id" />
+            <generator class="incriment" />
+        </id>
+
+        <property name="userName" type="java.lang.String">
+            <column name="user_name"/>
+        </property>
+
+        <property name="createdBy" type="java.lang.String">
+            <column name="created_by"/>
+        </property>
+
+        <property name="createdDate" type="timestamp">
+            <column name="created_date"/>
+        </property>
+    </class>
+
+
+</hibernate-mapping>
